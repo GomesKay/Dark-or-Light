@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Colors</title>
+
+        <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+
+            * {
+
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+
+            }
+
+            body {
+
+                display: grid;
+                place-content: center;
+                background-color: #FFF;
+
+            }
+
+            .p1 {
+
+                position: relative;
+                top: 1cm;
+                font-size: 1.8pc;
+                font-family: 'Roboto', sans-serif;
+
+            }
+
+            .button_dark {
+
+                color: #FFF;
+                position: relative;
+                top: 9.5cm;
+                left: 4cm;
+                height: 3.5pc;
+                width: 3cm;
+                border: 0;
+                border-radius: 2pt;
+                background: #000;
+                letter-spacing: 1px;
+                font-size: 1.5pc;
+                font-family: 'Bebas Neue', cursive;
+
+            }
+
+            .button_light {
+
+                color: #000;
+                position: relative;
+                top: 10.5cm;
+                left: 4cm;
+                height: 3.5pc;
+                width: 3cm;
+                border: 0;
+                border-radius: 2pt;
+                background: #FFF;
+                letter-spacing: 1px;
+                font-size: 1.5pc;
+                font-family: 'Bebas Neue', cursive;
+
+            }
+
+            .button_dark:hover, .button_light:hover {
+
+                transform: scale(1.1);
+                cursor: pointer;
+
+            }
+
+        </style>
+
+    </head>
+<body>
+
+    <p class="p1" id="pr"> Choose the Color: Dark or Light </p>
+
+    <div class="test"></div>
+
+    <button type="button" class="button_dark" id="dark">Dark</button>
+    <button type="button" class="button_light" id="light">Light</button>
+
+    <script>
+
+        var corp = window.document.body
+        var paragrafo = document.getElementById('pr')
+        var sombrio = document.getElementById('dark')
+        var luz = document.getElementById('light')
+        sombrio.addEventListener('click', night)
+        luz.addEventListener('click', day)
+
+        function night() {
+
+            corp.style.background = '#000'
+            paragrafo.style.color = '#FFF'
+
+        }
+
+        function day() {
+
+            corp.style.background = '#FFF'
+            paragrafo.style.color = '#000'
+
+        }
+
+    </script>
+
+</body>
+</html>
